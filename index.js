@@ -1,37 +1,36 @@
-
-
-/* 2. Data Types */
-const num = 5;
-const otherNum = 6;
-console.log(num * otherNum);
-console.log(num + otherNum);
-
-// What happens here?
-console.log(personName + num);
-
-
 /* 3. Functions */ 
+const personObject = {
+  name: 'Jacob',
+  age: 14,
+}
+const otherName = 'Marco'
+
 function greeting(name) {
   console.log('Hello, ' + name);
 }
 
 greeting('Amy')
+greeting(personObject.name);
 greeting(otherName);
-greeting(thirdName);
 
-/* 4. Conditional statements */
-function intlGreeting(name, lang) {
-  if (lang === 'en') {
-    console.log('Hello, ' + name)
-  } else if (lang === 'es') {
-    console.log('Hola, ' + name)
-  } else {
-    console.log(`Language code '${lang}' is not supported`)
-  }
+
+// Functions are variables too??
+
+const f = function (x) {
+  return x + 5;
 }
 
-intlGreeting('Amy', 'en');
-intlGreeting('Davis', 'es');
-intlGreeting('James', 'cn');
+// Another way to define a function
+const g = (x) => 5 * x;
 
+const h = (x) => 3 * (x ** 2) + 5 * x + 3;
 
+function derivative(f, x) {
+  const h = 0.00000000001;
+  const deriv = (f(x + h) - f (x)) / h;
+  return deriv.toFixed(2);
+}
+
+console.log(`Derivative of x + 5 at x = 5 is ${derivative(f, 5)}`)
+console.log(`Derivative of x * 5 at x = 5 is ${derivative(g, 5)}`)
+console.log(`Derivative of 3x^2 + 5x + 3 at x = 5 is ${derivative(h, 5)}`)
