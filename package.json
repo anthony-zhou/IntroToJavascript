@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/anthony-zhou/IntroToJavascript/issues"
   },
-  "homepage": "https://github.com/anthony-zhou/IntroToJavascript#readme"
+  "homepage": "https://github.com/anthony-zhou/IntroToJavascript#readme",
+  "dependencies": {}
 }
